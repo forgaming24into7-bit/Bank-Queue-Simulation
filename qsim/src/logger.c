@@ -3,9 +3,11 @@
 
 void logResultsCSV(const char *filename,
                    int numCustomers, int numTellers, int mode,
-                   double avgTime, double stdDev, double maxTime) {
+                   double avgTime, double stdDev, double maxTime)
+{
     FILE *fp = fopen(filename, "a");
-    if (!fp) {
+    if (!fp)
+    {
         perror("Error opening CSV file");
         return;
     }
